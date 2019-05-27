@@ -56,7 +56,7 @@ export default {
       };
     },
     followUserLabel() {
-      return `${this.profile.following ? "Aboneaza-te" : "Dezabonare"} ${
+      return `${this.profile.following ? "Dezabonare" : "Aboneaza-te"} ${
         this.article.author.username
       }`;
     },

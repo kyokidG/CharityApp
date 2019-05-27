@@ -3,8 +3,6 @@
 The stack is built using [vue-cli webpack](https://github.com/vuejs-templates/webpack) so to get started all you have to do is:
 
 
-
-
 Frontend 
 ``` bash
 # Clone this repository
@@ -14,11 +12,14 @@ Frontend
 # Install dependencies for frontend
 > yarn install
 # Install dependencies for backend 
-> cd backend && npm install && cd ..
-# Install MongoDB Community Edition [instructions](https://docs.mongodb.com/manual/installation/#tutorials) and run it by executing `mongod`
-# open another terminal and serve the backend 
-> npm run dev
-# open another terminal and serve the frontend with hot reload at localhost:8080
+> cd backend && npm install 
+# Run database migrations
+npm run db:migrate
+# Load some dummy data in the database (optional)
+npm run db:load
+# serve the backend 
+> npm start
+# open another terminal in the project root folder and serve the frontend with hot reload at localhost:8080
 > yarn serve
 ```
 
