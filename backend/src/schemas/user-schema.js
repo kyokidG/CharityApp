@@ -37,7 +37,7 @@ const userSchema = yup
     image: yup
       .string()
       .url()
-      .default("")
+      .default("https://joeschmoe.io/api/v1/random")
       .trim(),
 
     bio: yup

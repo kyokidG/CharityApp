@@ -27,6 +27,16 @@ export default new Router({
       ]
     },
     {
+      path: "/echipa",
+      name: "team",
+      component: () => import("@/views/Team")
+    },
+    {
+      path: "/implica-te",
+      name: "join-un",
+      component: () => import("@/views/JoinUs")
+    },
+    {
       name: "login",
       path: "/login",
       component: () => import("@/views/Login")

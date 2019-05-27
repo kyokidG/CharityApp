@@ -15,7 +15,7 @@ exports.up = function(knex) {
         .string("username")
         .unique()
         .notNullable()
-      table.string("image").defaultTo("")
+      table.string("image").defaultTo("https://joeschmoe.io/api/v1/random")
       table.text("bio").defaultTo("")
       table.string("password").notNullable()
       table.timestamps(true, true)

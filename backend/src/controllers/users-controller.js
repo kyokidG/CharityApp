@@ -64,7 +64,7 @@ module.exports = {
     ctx.assert(
       _.isObject(body.user) && body.user.email && body.user.password,
       422,
-      new ValidationError(["is invalid"], "", "email or password"),
+      new ValidationError(["nu sunt valide"], "", "email sau parola"),
     )
 
     let user = await db("users")
@@ -74,7 +74,7 @@ module.exports = {
     ctx.assert(
       user,
       422,
-      new ValidationError(["is invalid"], "", "email or password"),
+      new ValidationError(["nu sunt valide"], "", "email sau parola"),
     )
 
     const isValid = await bcrypt.compare(body.user.password, user.password)
@@ -82,7 +82,7 @@ module.exports = {
     ctx.assert(
       isValid,
       422,
-      new ValidationError(["is invalid"], "", "email or password"),
+      new ValidationError(["nu sunt valide"], "", "email sau parola"),
     )
 
     user = generateJWTforUser(user)
