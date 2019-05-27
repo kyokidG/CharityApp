@@ -12,7 +12,7 @@
                 class="btn btn-sm btn-outline-secondary action-btn"
                 :to="{ name: 'settings' }"
               >
-                <i class="ion-gear-a"></i> Edit Profile Settings
+                <i class="ion-gear-a"></i> Editeaza profilul
               </router-link>
             </div>
             <div v-else>
@@ -21,7 +21,7 @@
                 v-if="profile.following"
                 @click.prevent="unfollow();"
               >
-                <i class="ion-plus-round"></i> &nbsp;Unfollow
+                <i class="ion-plus-round"></i> &nbsp;Aboneaza-te
                 {{ profile.username }}
               </button>
               <button
@@ -29,7 +29,7 @@
                 v-if="!profile.following"
                 @click.prevent="follow();"
               >
-                <i class="ion-plus-round"></i> &nbsp;Follow
+                <i class="ion-plus-round"></i> &nbsp;Dezabonare
                 {{ profile.username }}
               </button>
             </div>

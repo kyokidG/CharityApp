@@ -2,8 +2,9 @@
   <div class="home-page">
     <div class="banner">
       <div class="container">
-        <h1 class="logo-font">VoluntApp</h1>
-        <p>A place to share your charity events </p><br/>
+        <h1 class="logo-font">CharityApp</h1>
+        <p>Aplicatia de gestionat evenimente de caritate</p>
+        <br />
         <p>📅</p>
       </div>
     </div>
@@ -18,7 +19,7 @@
                   class="nav-link"
                   active-class="active"
                 >
-                  Your Feed
+                  Evenimentele mele
                 </router-link>
               </li>
               <li class="nav-item">
@@ -28,7 +29,7 @@
                   class="nav-link"
                   active-class="active"
                 >
-                  Global Feed
+                  Toate evenimentele
                 </router-link>
               </li>
               <li class="nav-item" v-if="tag">
@@ -46,7 +47,7 @@
         </div>
         <div class="col-md-3">
           <div class="sidebar">
-            <p>Popular Tags</p>
+            <p>Taguri populare</p>
             <div class="tag-list">
               <RwvTag v-for="(tag, index) in tags" :name="tag" :key="index">
               </RwvTag>

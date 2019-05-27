@@ -3,10 +3,10 @@
     <div class="container page">
       <div class="row">
         <div class="col-md-6 offset-md-3 col-xs-12">
-          <h1 class="text-xs-center">Sign up</h1>
+          <h1 class="text-xs-center">Inregistrare</h1>
           <p class="text-xs-center">
             <router-link :to="{ name: 'login' }">
-              Have an account?
+              Ai deja un cont?
             </router-link>
           </p>
           <ul v-if="errors" class="error-messages">
@@ -34,11 +34,19 @@
                 class="form-control form-control-lg"
                 type="password"
                 v-model="password"
-                placeholder="Password"
+                placeholder="Parola"
+              />
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                class="form-control form-control-lg"
+                type="password"
+                v-model="password2"
+                placeholder="Repeta parola"
               />
             </fieldset>
             <button class="btn btn-lg btn-primary pull-xs-right">
-              Sign up
+              Creeaza cont
             </button>
           </form>
         </div>
@@ -57,7 +65,8 @@ export default {
     return {
       username: "",
       email: "",
-      password: ""
+      password: "",
+      password2: ""
     };
   },
   computed: {

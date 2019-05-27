@@ -9,14 +9,14 @@
         <textarea
           class="form-control"
           v-model="comment"
-          placeholder="Write a comment..."
+          placeholder="Scrie un comentariu..."
           rows="3"
         >
         </textarea>
       </div>
       <div class="card-footer">
         <img :src="userImage" class="comment-author-img" />
-        <button class="btn btn-sm btn-primary">Post Comment</button>
+        <button class="btn btn-sm btn-primary">Posteaza</button>
       </div>
     </form>
   </div>

@@ -33,10 +33,12 @@
           >
           </RwvCommentEditor>
           <p v-else>
-            <router-link :to="{ name: 'login' }">Sign in</router-link>
-            or
-            <router-link :to="{ name: 'register' }">sign up</router-link>
-            to add comments on this article.
+            <router-link :to="{ name: 'login' }">Logheaza-te</router-link>
+            sau
+            <router-link :to="{ name: 'register' }"
+              >inregistreaza-te</router-link
+            >
+            pentru a aduaga comentarii la acest eveniment
           </p>
           <RwvComment
             v-for="(comment, index) in comments"

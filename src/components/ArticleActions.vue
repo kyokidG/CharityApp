@@ -2,11 +2,11 @@
   <!-- Used when user is also author -->
   <span v-if="canModify">
     <router-link class="btn btn-sm btn-outline-secondary" :to="editArticleLink">
-      <i class="ion-edit"></i> <span>&nbsp;Edit Article</span>
+      <i class="ion-edit"></i> <span>&nbsp;Editeaza evenimentul</span>
     </router-link>
     <span>&nbsp;&nbsp;</span>
     <button class="btn btn-outline-danger btn-sm" @click="deleteArticle">
-      <i class="ion-trash-a"></i> <span>&nbsp;Delete Article</span>
+      <i class="ion-trash-a"></i> <span>&nbsp;Sterge evenimentul</span>
     </button>
   </span>
   <!-- Used in ArticleView when not author -->
@@ -56,12 +56,12 @@ export default {
       };
     },
     followUserLabel() {
-      return `${this.profile.following ? "Unfollow" : "Follow"} ${
+      return `${this.profile.following ? "Aboneaza-te" : "Dezabonare"} ${
         this.article.author.username
       }`;
     },
     favoriteArticleLabel() {
-      return this.article.favorited ? "Unfavorite Article" : "Favorite Article";
+      return this.article.favorited ? "Nu vreau sa merg" : "Vreau sa merg";
     },
     favoriteCounter() {
       return `(${this.article.favoritesCount})`;

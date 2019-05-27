@@ -2,16 +2,12 @@
   <footer>
     <div class="container">
       <router-link class="logo-font" :to="{ name: 'home', params: {} }">
-        VoluntApp
+        CharityApp
       </router-link>
-      <!--
+
       <span class="attribution">
-        An interactive learning project from
-        <a rel="noopener noreferrer" target="blank" href="https://thinkster.io"
-          >Thinkster</a
-        >. Code &amp; design licensed under MIT.
+        O aplicatie interactiva de gestionat evenimente de caritate 🎗
       </span>
-      -->
     </div>
   </footer>
 </template>

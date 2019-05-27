@@ -3,6 +3,9 @@
     <div class="container page">
       <div class="row">
         <div class="col-md-10 offset-md-1 col-xs-12">
+          <h1 class="text-xs-center">Creeaza un eveniment nou</h1>
+        </div>
+        <div class="col-md-10 offset-md-1 col-xs-12">
           <RwvListErrors :errors="errors" />
           <form v-on:submit.prevent="onPublish(article.slug);">
             <fieldset :disabled="inProgress">
@@ -11,7 +14,7 @@
                   type="text"
                   class="form-control form-control-lg"
                   v-model="article.title"
-                  placeholder="Article Title"
+                  placeholder="Titlul evenimentului"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -19,7 +22,7 @@
                   type="text"
                   class="form-control"
                   v-model="article.description"
-                  placeholder="What's this article about?"
+                  placeholder="Data evenimentului"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -27,7 +30,7 @@
                   class="form-control"
                   rows="8"
                   v-model="article.body"
-                  placeholder="Write your article (in markdown)"
+                  placeholder="Descrierea evenimentului - in markdown daca vrei ..."
                 >
                 </textarea>
               </fieldset>
@@ -35,7 +38,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Enter tags"
+                  placeholder="Adauga tag-uri"
                   v-model="tagInput"
                   v-on:keypress.enter.prevent="addTag(tagInput);"
                 />
@@ -57,7 +60,7 @@
               class="btn btn-lg pull-xs-right btn-primary"
               type="submit"
             >
-              Publish Article
+              Publica eveniment
             </button>
           </form>
         </div>

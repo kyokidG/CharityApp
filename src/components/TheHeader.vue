@@ -2,7 +2,7 @@
   <nav class="navbar navbar-light">
     <div class="container">
       <router-link class="navbar-brand" :to="{ name: 'home' }">
-        VoluntApp
+        CharityApp
       </router-link>
       <ul v-if="!isAuthenticated" class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
@@ -12,7 +12,7 @@
             exact
             :to="{ name: 'home' }"
           >
-            Home
+            Acasa
           </router-link>
         </li>
         <li class="nav-item">
@@ -22,7 +22,7 @@
             exact
             :to="{ name: 'login' }"
           >
-            <i class="ion-compose"></i>Sign in
+            <i class="ion-compose"></i>Logare
           </router-link>
         </li>
         <li class="nav-item">
@@ -32,7 +32,7 @@
             exact
             :to="{ name: 'register' }"
           >
-            <i class="ion-compose"></i>Sign up
+            <i class="ion-compose"></i>Inregistrare
           </router-link>
         </li>
       </ul>
@@ -44,7 +44,7 @@
             exact
             :to="{ name: 'home' }"
           >
-            Home
+            Acasa
           </router-link>
         </li>
         <li class="nav-item">
@@ -53,7 +53,7 @@
             active-class="active"
             :to="{ name: 'article-edit' }"
           >
-            <i class="ion-compose"></i>&nbsp;New Article
+            <i class="ion-compose"></i>&nbsp;Eveniment nou
           </router-link>
         </li>
         <li class="nav-item">
@@ -63,7 +63,7 @@
             exact
             :to="{ name: 'settings' }"
           >
-            <i class="ion-gear-a"></i>&nbsp;Settings
+            <i class="ion-gear-a"></i>&nbsp;Setari
           </router-link>
         </li>
         <li class="nav-item" v-if="currentUser.username">
@@ -79,6 +79,11 @@
             {{ currentUser.username }}
           </router-link>
         </li>
+        <li class="nav-item" v-if="currentUser.username">
+          <button @click="logout" class="btn btn-outline-danger">
+            Delogare
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -86,11 +91,19 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { LOGOUT } from "@/store/actions.type";
 
 export default {
   name: "RwvHeader",
   computed: {
     ...mapGetters(["currentUser", "isAuthenticated"])
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch(LOGOUT).then(() => {
+        this.$router.push({ name: "home" });
+      });
+    }
   }
 };
 </script>

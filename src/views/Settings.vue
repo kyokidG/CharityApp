@@ -3,7 +3,7 @@
     <div class="container page">
       <div class="row">
         <div class="col-md-6 offset-md-3 col-xs-12">
-          <h1 class="text-xs-center">Your Settings</h1>
+          <h1 class="text-xs-center">Setari</h1>
           <form @submit.prevent="updateSettings();">
             <fieldset>
               <fieldset class="form-group">
@@ -11,7 +11,7 @@
                   class="form-control"
                   type="text"
                   v-model="currentUser.image"
-                  placeholder="URL of profile picture"
+                  placeholder="URL catre poza de profil"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -19,7 +19,7 @@
                   class="form-control form-control-lg"
                   type="text"
                   v-model="currentUser.username"
-                  placeholder="Your username"
+                  placeholder="Username-ul tau"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -27,7 +27,7 @@
                   class="form-control form-control-lg"
                   rows="8"
                   v-model="currentUser.bio"
-                  placeholder="Short bio about you"
+                  placeholder="Scurt bio despre tine"
                 ></textarea>
               </fieldset>
               <fieldset class="form-group">
@@ -43,18 +43,18 @@
                   class="form-control form-control-lg"
                   type="password"
                   v-model="currentUser.password"
-                  placeholder="Password"
+                  placeholder="Parola"
                 />
               </fieldset>
               <button class="btn btn-lg btn-primary pull-xs-right">
-                Update Settings
+                Update
               </button>
             </fieldset>
           </form>
           <!-- Line break for logout button -->
           <hr />
           <button @click="logout" class="btn btn-outline-danger">
-            Or click here to logout.
+            Delogare
           </button>
         </div>
       </div>
