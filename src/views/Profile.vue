@@ -63,6 +63,16 @@
                   Evenimente favorite
                 </router-link>
               </li>
+              <li class="nav-item">
+                <router-link
+                  class="nav-link"
+                  active-class="active"
+                  exact
+                  :to="{ name: 'statistics' }"
+                >
+                  Statistici
+                </router-link>
+              </li>
             </ul>
           </div>
           <router-view></router-view>

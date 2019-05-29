@@ -32,6 +32,11 @@ export default new Router({
       component: () => import("@/views/Team")
     },
     {
+      path: "/despre-noi",
+      name: "despre-noi",
+      component: () => import("@/views/DespreNoi")
+    },
+    {
       path: "/implica-te",
       name: "join-un",
       component: () => import("@/views/JoinUs")
@@ -67,6 +72,11 @@ export default new Router({
           name: "profile-favorites",
           path: "favorites",
           component: () => import("@/views/ProfileFavorited")
+        },
+        {
+          name: "statistics",
+          path: "/statistici",
+          component: () => import("@/views/ProfileStatistics")
         }
       ]
     },

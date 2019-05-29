@@ -20,6 +20,16 @@
             class="nav-link"
             active-class="active"
             exact
+            :to="{ name: 'despre-noi' }"
+          >
+            Despre noi
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link
+            class="nav-link"
+            active-class="active"
+            exact
             :to="{ name: 'login' }"
           >
             <i class="ion-compose"></i>Logare
@@ -35,16 +45,6 @@
             <i class="ion-compose"></i>Inregistrare
           </router-link>
         </li>
-        <li class="nav-item">
-          <router-link
-            class="nav-link"
-            active-class="active"
-            exact
-            :to="{ name: 'team' }"
-          >
-            <i class="ion-people"></i>Echipa
-          </router-link>
-        </li>
       </ul>
       <ul v-else class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
@@ -55,6 +55,26 @@
             :to="{ name: 'home' }"
           >
             Acasa
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link
+            class="nav-link"
+            active-class="active"
+            exact
+            :to="{ name: 'despre-noi' }"
+          >
+            Despre noi
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link
+            class="nav-link"
+            active-class="active"
+            exact
+            :to="{ name: 'team' }"
+          >
+            <i class="ion-people"></i>Echipa
           </router-link>
         </li>
         <li class="nav-item">
