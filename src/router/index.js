@@ -1,6 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js'
 
+Vue.use(Chartkick.use(Chart))
 Vue.use(Router);
 
 export default new Router({
@@ -70,7 +73,7 @@ export default new Router({
         },
         {
           name: "profile-favorites",
-          path: "favorites",
+          path: "/favorites",
           component: () => import("@/views/ProfileFavorited")
         },
         {
